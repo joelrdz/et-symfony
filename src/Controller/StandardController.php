@@ -8,9 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class StandardController extends AbstractController
 {
-    #[Route('/standard', name: 'app_standard')]
-    public function index(): Response
+    #[Route('/standard/{id}', name: 'app_standard')]
+    public function index($id): Response
     {
+        dump($id);
         return $this->render('standard/index.html.twig', [
             'controller_name' => 'StandardController',
         ]);
