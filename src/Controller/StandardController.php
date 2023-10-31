@@ -18,6 +18,9 @@ class StandardController extends AbstractController
 
     #[Route('/page/{param1}/{param2}', name: 'page')]
     public function page($param1, $param2) {
-        return $this->render('standard/page.html.twig');
+        return $this->render('standard/page.html.twig', [
+            'param1' => $param1,
+            'param2' => $param2,
+        ]);
     }
 }
