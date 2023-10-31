@@ -10,9 +10,7 @@ class StandardController extends AbstractController
 {
     #[Route('/', name: 'standard')]
     public function index(): Response {
-        return $this->render('standard/index.html.twig', [
-            'controller_name' => 'StandardController',
-        ]);
+        return $this->redirectToRoute('page');
     }
 
     #[Route('/page', name: 'page')]
